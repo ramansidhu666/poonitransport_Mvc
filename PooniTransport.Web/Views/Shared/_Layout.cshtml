@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooni Transport Inc.</title>
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css">
+    <!-- =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-= -->
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <!-- =-=-=-=-=-=-= Font Awesome =-=-=-=-=-=-= -->
+    <link rel="stylesheet" href="~/Content/css/font-awesome.css" type="text/css">
+    <!-- =-=-=-=-=-=-= Et Line Fonts =-=-=-=-=-=-= -->
+    <link rel="stylesheet" href="~/Content/css/et-line-fonts.css" type="text/css">
+    <!-- =-=-=-=-=-=-= Owl carousel =-=-=-=-=-=-= -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/owl.style.css">
+    <!-- =-=-=-=-=-=-= Google Fonts =-=-=-=-=-=-= -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic,900italic,900,300,300italic" rel="stylesheet" type="text/css">
+    <link href="../../../../fonts.googleapis_0DAFF67C" rel="stylesheet" type="text/css">
+    <!-- =-=-=-=-=-=-= Flat Icon =-=-=-=-=-=-= -->
+    <link href="~/Content/css/flaticon.css" rel="stylesheet">
+    <!-- =-=-=-=-=-=-= Magnific PopUP CSS =-=-=-=-=-=-= -->
+    <link href="~/Scripts/js/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!-- Theme Color -->
+    <link rel="stylesheet" id="color" href="~/Content/css/colors/defualt.css">
+    <!-- For Style Switcher -->
+    <link rel="stylesheet" id="theme-color" type="text/css" href="#" />
+    <!-- Revolution Slider 5.x CSS settings -->
+    <!-- For This Page Only -->
+    <link href="~/Scripts/js/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" />
+    <link href="~/Scripts/js/revolution-slider/css/navigation.css" rel="stylesheet" type="text/css" />
+    <!-- Animation Css -->
+    <link href="~/Content/css/animate.min.css" rel="stylesheet">
+    <!-- Menu Hover -->
+    <link href="~/Content/css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+</head>
+<body>
+    <!-- =-=-=-=-=-=-= HEADER =-=-=-=-=-=-= -->
+
+    <header class="header-area">
+
+        <!-- Logo Bar -->
+        <div class="logo-bar">
+            <div class="container clearfix">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="~/Home/Index"><img src="~/images/logo.png" alt=""></a>
+                </div>
+
+                <!--Info Outer-->
+                <div class="information-content">
+                    <!--Info Box-->
+                    <div class="info-box  hidden-sm">
+
+                        <div class="text">EMAIL</div>
+                        <a href="mailto:info@poonitransport.com">info@poonitransport.com</a>
+                    </div>
+                    <!--Info Box-->
+                    <div class="info-box">
+
+                        <div class="text">Call Now</div>
+                        <a class="location" href="tel:905-915-7881">(905) 915-7881</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Header Top End -->
+        <!-- Menu Section -->
+        <div class="navigation-2">
+            <!-- navigation-start -->
+            <nav class="navbar navbar-default ">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="main-navigation">
+                        <ul class="nav navbar-nav">
+                            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active" : "")"> 
+                            <a href="~/Home/Index">Home</a>
+                            </li>
+                            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active" : "")">
+                            <a href="~/Home/About">About us</a>
+                            </li>
+                            <li class="dropdown ">
+                                <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-animations="fadeInUp">Our Services <span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "FlatbedServices" ? "active" : "")"><a  href="~/Home/FlatbedServices">Flatbed Trucking</a> </li>
+                                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "RefrigeratedServices" ? "active" : "")"><a href="~/Home/RefrigeratedServices">Refrigerated Trucking</a> </li>
+                                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "DryServices" ? "active" : "")"><a href="~/Home/DryServices">Dry Freight Trucking</a> </li>
+                                </ul>
+                            </li>
+                            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Gallery" ? "active" : "")"><a href="~/Home/Gallery">Gallery</a></li>
+                            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active" : "")"><a href="~/Home/Contact">Contact us</a></li>
+                        </ul>
+                        <div data-target="#request-quote" data-toggle="modal">
+                            <a class="btn btn-primary pull-right" href="javascript:void(0)">Request a Quote</a>
+                        </div>
+                    </div>
+
+                    <!-- /.navbar-collapse -->
+
+                </div>
+                <!-- /.container-end -->
+            </nav>
+        </div>
+        <!-- /.navigation-end -->
+        <!-- Menu  End -->
+    </header>
+    <!-- =-=-=-=-=-=-= HEADER END =-=-=-=-=-=-= -->
+        @RenderBody()
+        <!-- =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-= -->
+        <footer class="footer-area">
+
+            <!--Footer Upper-->
+            <div class="footer-content">
+                <div class="container">
+                    <div class="row clearfix">
+
+                        <!--Two 4th column-->
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="row clearfix">
+                                <div class="col-lg-7 col-sm-6 col-xs-12 column">
+                                    <div class="footer-widget about-widget">
+                                        <div class="logo">
+                                            <a href="~/Home/Index"><img src="~/images/logo-1.png" class="img-responsive" alt=""></a>
+                                        </div>
+
+                                        <ul class="contact-info">
+                                            <li><span class="icon fa fa-phone"></span><a href="tel:905-915-7881">(905) 915-7881</a></li>
+                                            <li><span class="icon fa fa-envelope-o"></span> <a href="mailto:info@poonitransport.com">info@poonitransport.com</a></li>
+                                            <li> <span class="icon2 fa fa-print"></span><a href="fax:905-364-0808"> (905) 364-0808</a></li>
+                                       </ul>
+                                        <div class="social-links-two clearfix">
+                                            <a href="#" class="facebook img-circle"><span class="fa fa-facebook-f"></span></a>
+                                            <a href="#" class="twitter img-circle"><span class="fa fa-twitter"></span></a>
+                                            <a href="#" class="google-plus img-circle"><span class="fa fa-google-plus"></span></a>
+                                            <a href="#" class="linkedin img-circle"><span class="fa fa-linkedin"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+
+                                <div class="col-lg-5 col-sm-6 col-xs-12 column">
+                                    <div class="footer-widget links-widget">
+                                        <h2>Site Links</h2>
+                                        <ul>
+                                            <li><a href="~/Home/Index">Home</a></li>
+                                            <li><a href="~/Home/about">About Us</a></li>
+                                            <li><a href="~/Home/Gallery">Gallery</a></li>
+                                            <li><a href="~/Home/Contact">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Two 4th column End-->
+                        <!--Two 4th column-->
+                        <div class="col-md-6 col-sm-12 col-xs-12">
+                            <div class="row clearfix">
+                                <!--Footer Column-->
+                                <div class="col-lg-5 col-sm-6 col-xs-12 column">
+                                    <h2>Our Service</h2>
+                                    <div class="footer-widget links-widget">
+                                        <ul>
+                                            <li><a href="~/Home/FlatbedServices">Flatbed Trucking</a> </li>
+                                            <li><a href="~/Home/RefrigeratedServices">Refrigerated Trucking</a> </li>
+                                            <li><a href="~/Home/DryServices">Dry Freight Trucking</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--Footer Column-->
+                                <div class="col-lg-7 col-sm-6 col-xs-12 column">
+                                    <div class="footer-widget news-widget">
+                                        <h2>Location</h2>
+
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184531.95743753095!2d-79.89962571683019!3d43.72484846359267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b15eaa5d05abf%3A0x352d31667cc38677!2sBrampton%2C+ON%2C+Canada!5e0!3m2!1sen!2sin!4v1535741256238" width="100%" height="150px" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                                    </div>
+                                </div>
+
+                                <!--Footer Column-->
+
+                            </div>
+                        </div>
+                        <!--Two 4th column End-->
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer Bottom-->
+            <div class="footer-copyright">
+                <div class="auto-container clearfix">
+                    <!--Copyright-->
+                    <div class="copyright text-center">Copyright 2018 &copy; Designed By <a target="_blank" href="#">Only4Agents</a> All Rights Reserved</div>
+                </div>
+            </div>
+        </footer>
+    
+    <!-- =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-= -->
+    <script src="~/Scripts/js/jquery.min.js"></script>
+    <!-- Bootstrap Core Css  -->
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+    <!-- Dropdown Hover  -->
+    <script src="~/Scripts/js/bootstrap-dropdownhover.min.js"></script>
+    <!-- Dropdown Hover  -->
+    <!-- Jquery Easing -->
+    <script type="text/javascript" src="~/Scripts/js/easing.js"></script>
+    <!-- Jquery Counter -->
+    <script src="~/Scripts/js/jquery.countTo.js"></script>
+    <!-- Jquery Waypoints -->
+    <script src="~/Scripts/js/jquery.waypoints.js"></script>
+    <!-- Jquery Appear Plugin -->
+    <script src="~/Scripts/js/jquery.appear.min.js"></script>
+    <!-- Jquery Shuffle Portfolio -->
+    <script src="~/Scripts/js/jquery.shuffle.min.js"></script>
+    <!-- Carousel Slider  -->
+    <script src="~/Scripts/js/carousel.min.js"></script>
+    <!-- Jquery Migrate -->
+    <script src="~/Scripts/js/jquery-migrate.min.js"></script>
+    <!--Style Switcher -->
+    <script src="~/Scripts/js/color-switcher.js"></script>
+    <!-- Gallery Magnify  -->
+    <script src="~/Scripts/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Sticky Bar  -->
+    <script src="~/Scripts/js/theia-sticky-sidebar.js"></script>
+    <!-- Template Core JS -->
+    <script src="~/Scripts/js/custom.js"></script>
+
+    <!-- Jquery For Home Page Only  -->
+    <!-- Revolution Slider 5.x SCRIPTS -->
+    <script src="~/Scripts/js/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Scripts/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/Scripts/js/custom.js"></script>
+    <script type="text/javascript">
+              $(document).ready(function(e) {
+                var revapi = $(".rev_slider").revolution({
+                  sliderType:"standard",
+                  jsFileLocation: "js/revolution-slider/js/",
+                  sliderLayout: "auto",
+                  dottedOverlay: "none",
+                  delay: 5000,
+                  navigation: {
+                      keyboardNavigation: "off",
+                      keyboard_direction: "horizontal",
+                      mouseScrollNavigation: "off",
+                      onHoverStop: "off",
+                      touch: {
+                          touchenabled: "on",
+                          swipe_threshold: 75,
+                          swipe_min_touches: 1,
+                          swipe_direction: "horizontal",
+                          drag_block_vertical: false
+                      },
+                      arrows: {
+                          style: "gyges",
+                          enable: true,
+                          hide_onmobile: false,
+                          hide_onleave: true,
+                          hide_delay: 200,
+                          hide_delay_mobile: 1200,
+                          tmp: '',
+                          left: {
+                              h_align: "left",
+                              v_align: "center",
+                              h_offset: 0,
+                              v_offset: 0
+                          },
+                          right: {
+                              h_align: "right",
+                              v_align: "center",
+                              h_offset: 0,
+                              v_offset: 0
+                          }
+                      },
+
+                        bullets: {
+                        enable: true,
+                        hide_onmobile: true,
+                        hide_under: 800,
+                        style: "hebe",
+                        hide_onleave: false,
+                        direction: "horizontal",
+                        h_align: "center",
+                        v_align: "bottom",
+                        h_offset: 0,
+                        v_offset: 30,
+                        space: 5,
+                        tmp: '<span class="tp-bullet-image"></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title"></span>'
+                    }
+                  },
+                  responsiveLevels: [1240, 1024, 778],
+                  visibilityLevels: [1240, 1024, 778],
+                  gridwidth: [1170, 1024, 778, 480],
+                  gridheight: [620, 768, 960, 720],
+                  lazyType: "none",
+                  parallax: {
+					type: "scroll",
+					origo: "slidercenter",
+					speed: 1000,
+					levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 100, 55],
+					type: "scroll",
+                  },
+                  shadow: 0,
+                  spinner: "off",
+                  stopLoop: "on",
+                  stopAfterLoops: 0,
+                  stopAtSlide: -1,
+                  shuffle: "off",
+                  autoHeight: "off",
+                  fullScreenAutoWidth: "off",
+                  fullScreenAlignForce: "off",
+                  fullScreenOffsetContainer: "",
+                  fullScreenOffset: "0",
+                  hideThumbsOnMobile: "off",
+                  hideSliderAtLimit: 0,
+                  hideCaptionAtLimit: 0,
+                  hideAllCaptionAtLilmit: 0,
+                  debugMode: false,
+                  fallbacks: {
+                      simplifyAll: "off",
+                      nextSlideOnWindowFocus: "off",
+                      disableFocusListener: false,
+                  }
+                });
+              });
+    </script>
+
+    <script type="text/javascript" src="~/Scripts/js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/revolution-slider/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
+   @* @RenderSection("scripts", required: false)*@
+
+    <div class="modal fade " id="request-quote" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+           @Html.Partial("RequestQuotePartialView")
+        </div><!-- /.modal-dialog -->
+    </div>
+</body>
+</html>
